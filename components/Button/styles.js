@@ -18,8 +18,14 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.border,
   },
+  outline: {
+    backgroundColor: 'transparent',
+    borderWidth: 1,
+    borderColor: colors.primary,
+  },
   text: { color: colors.primaryText, fontWeight: '700', fontSize: 13 },
   textLarge: { fontSize: 15 },
   textSecondary: { color: colors.text },
+  textOutline: { color: colors.primary },
   icon: { marginRight: 4 },
 });

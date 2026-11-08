@@ -11,6 +11,10 @@ export const colors = {
   track: '#E5E7EB',
   danger: '#EF4444',
   warning: '#A3B518',
+  orange: '#F97316',
+  blue: '#3B82F6',
+  pink: '#EC4899',
+  yellow: '#EAB308',
 };
 
 export const radius = { sm: 8, md: 12, pill: 999 };

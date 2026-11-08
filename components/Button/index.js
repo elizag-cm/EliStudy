@@ -5,7 +5,7 @@ import styles from './styles';
 
 /**
  * Botão reutilizável.
- * variant: 'primary' | 'secondary'   size: 'small' | 'large'   shape: 'rounded' | 'pill'
+ * variant: 'primary' | 'secondary' | 'outline'   size: 'small' | 'large'   shape: 'rounded' | 'pill'
  */
 export default function Button({
   title,
@@ -17,6 +17,7 @@ export default function Button({
   style,
 }) {
   const secondary = variant === 'secondary';
+  const outline = variant === 'outline';
   return (
     <Pressable
       onPress={onPress}
@@ -25,6 +26,7 @@ export default function Button({
         size === 'large' && styles.large,
         shape === 'pill' && styles.pill,
         secondary && styles.secondary,
+        outline && styles.outline,
         pressed && { opacity: 0.7 },
         style,
       ]}
@@ -33,7 +35,7 @@ export default function Button({
         <Ionicons
           name={icon}
           size={size === 'large' ? 18 : 14}
-          color={secondary ? colors.text : colors.primaryText}
+          color={secondary ? colors.text : outline ? colors.primary : colors.primaryText}
           style={styles.icon}
         />
       )}
@@ -42,6 +44,7 @@ export default function Button({
           styles.text,
           size === 'large' && styles.textLarge,
           secondary && styles.textSecondary,
+          outline && styles.textOutline,
         ]}
       >
         {title}
