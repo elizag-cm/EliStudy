@@ -50,7 +50,6 @@ export default function LoginScreen({
 
                 <AuthInput
                     label="Senha"
-                    icon="eye-closed"
                     placeholder="Digite sua senha"
                     secureTextEntry
                     value={senha}
@@ -62,7 +61,7 @@ export default function LoginScreen({
                     </Text>
                 </TouchableOpacity>
 
-                <Button style={styles.button} title="Entrar" onPress={login}/>
+                <Button style={styles.button} title="Entrar" onPress={login} />
 
                 <View style={styles.dividerContainer}>
                     <View style={styles.divider} />
@@ -78,7 +77,7 @@ export default function LoginScreen({
                     message="Ainda não tem uma conta?"
                     actionText="Cadastrar-se"
                     onPress={onCadastro}
-                    />
+                />
 
             </AuthContainer>
 
@@ -100,7 +99,7 @@ const styles = StyleSheet.create({
         textAlign: 'right',
     },
 
-    footerText:{
+    footerText: {
         color: colors.title,
         fontSize: 13,
         fontWeight: '500',
@@ -108,7 +107,7 @@ const styles = StyleSheet.create({
         marginTop: 12,
     },
 
-    cadastrar:{
+    cadastrar: {
         color: colors.primary,
         fontSize: 13,
         fontWeight: '500',
