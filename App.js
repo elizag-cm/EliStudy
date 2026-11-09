@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import BottomNav from './components/BottomNav';
+import SettingsDropdown from './components/settingsDropdown';
 import InicioScreen from './screens/InicioScreen';
 import ProgressoScreen from './screens/ProgressoScreen';
 import MateriasScreen from './screens/MateriasScreen';
@@ -56,6 +57,16 @@ export default function App() {
         <View style={styles.tela}>
           {renderTela()}
         </View>
+
+        {logado && (
+          <SettingsDropdown
+            onLogout={() => {
+              setLogado(false)
+              setTelaAuth('login')
+              setAba('inicio')}
+            } 
+          />
+        )}
 
         {logado && (
           <BottomNav
